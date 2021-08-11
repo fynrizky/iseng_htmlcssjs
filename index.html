@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan html css 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-nav">
+        <nav>
+            <div class="nav-head">
+                R.
+            </div>
+            <div class="nav-link">
+                <a href="#home" class="nav-btn active link-active">Home</a>
+                <a href="#about" class="nav-btn">About</a>
+                <a href="#service" class="nav-btn">Service</a>
+                <a href="#portfolio" class="nav-btn">Portfolio</a>
+                <a href="#contact" class="nav-btn">Contact</a>
+            </div>
+        </nav>
+    </div>
+    <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <section id="home">
+        <div class="container-box">
+            <h1>
+                Hallo I'm Rizky
+            </h1>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container-box2">
+            <h5>
+                About
+            </h5>
+        </div>
+    </section>
+    <section id="service">
+        <div class="container-box3">
+            <h5>
+                Service
+            </h5>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container-box4">
+            <h5>
+                Portfolio
+            </h5>
+        </div>
+    <section id="contact">
+        <div class="container-box5">
+            <h5>
+                Contact
+            </h5>
+        </div>
+    </section>
+    <script>
+        let navLink = document.querySelector('.nav-link');
+        let navBtn = navLink.getElementsByClassName('nav-btn');
+
+        for (let index = 0; index < navBtn.length; index++) {
+          navBtn[index].addEventListener("click", function(){
+              //   console.info(`ini ${index}`)
+              let current = document.getElementsByClassName('active link-active');
+              if(current.length > 0){
+                //   console.info(`ini ${current.length}`)
+                current[0].className = current[0].className.replace(" active link-active", "")
+              }
+              this.className += " active link-active"
+          });
+            
+        }
+        // navbar
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('.container-nav nav');
+        menuToggle.addEventListener("click", function(){
+            nav.classList.toggle('slide')
+        })
+    </script>
+</body>
+
+</html>
