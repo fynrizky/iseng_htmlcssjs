@@ -71,10 +71,9 @@
 
         for (let index = 0; index < navBtn.length; index++) {
           navBtn[index].addEventListener("click", function(){
-              //   console.info(`ini ${index}`)
               let current = document.getElementsByClassName('active link-active');
+                // console.info(`ini ${index}`)
               if(current.length > 0){
-                //   console.info(`ini ${current.length}`)
                 current[0].className = current[0].className.replace(" active link-active", "")
               }
               this.className += " active link-active"
