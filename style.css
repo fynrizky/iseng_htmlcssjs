@@ -140,7 +140,7 @@ body{
 @media screen and (max-width: 992px){
     /* container nav */
     .container-nav nav{
-        margin-top: 150px;
+        margin-top: 80px;
         height: 520px;
         width: 125px;
         justify-content: space-evenly;
